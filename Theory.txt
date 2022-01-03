@@ -1,0 +1,47 @@
+Form_validation
+
+
+// Kiểm tra dữ liệu đầu vào của người đùng
+
+// Validation
+    - //Bắt Validation(bắt lỗi dữ liệu input không hợp lệ)
+  if (sinhVien.maSinhVien.trim() === '') {
+    // DOM đến thẻ span#spanmaSV
+    document.querySelector('#spanMaSV').innerHTML = 'Không được bỏ trống!';
+
+    // return; // không thực hiện gì hết
+    valid = false;
+  } else {
+    document.querySelector('#spanMaSV').innerHTML = '';
+  }
+
+  // Kiểm tra tên SV
+  if (sinhVien.tenSinhVien.trim() === '') {
+    // DOM đến thẻ span#spanmaSV
+    document.querySelector('#spanTenSV').innerHTML = 'Không được bỏ trống!';
+
+    // return; // không thực hiện gì hết
+    valid = false;
+  } else {
+    document.querySelector('#spanTenSV').innerHTML = '';
+  }
+
+  // Kiểm tra valid, Nếu false thì dừng chương trình lại luôn
+  if (!valid) {
+    // Nếu valid không phải là true => false, dừng chương trình lại
+    return;
+  }
+
+  // Trường hơp là Match thì ta lấy giá trị .match
+  // Còn kiểm tra test thì lấy biến chuỗi .test
+  // Biểu thức kiểm tra chuoix có hợp lệ hay không
+
+  let regexCyberSoft = /CyberSoft/gi;
+
+  let title = 'asdadsasa dasdas daCyberSoft';
+
+  let result = regexCyberSoft.test(title);
+
+  console.log('result', result);
+
+//. Có thể dùng JS để giao tiếp dữ liệu với back-End
